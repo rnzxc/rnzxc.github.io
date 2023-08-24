@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset=utf-8>
+    <meta name=viewport content="width=device-width,initial-scale=1">
+    <title>rnzxc - home</title>
+    <link rel=stylesheet type=text/css href=/css/cli.css>
+</head>
+<body>
+<!---------------->
+
+<pre id=motd>
+rnzxc - home
+<hr></pre>
+
+<pre id=motd_extra>
+  &&
+  #&      #&
+  ##      #&
+  #&#     #&
+ &# #&    &#&                                &&
+ &&  #    #&&     &&                &#&&   &#&#&
+ &&  &#  &# #   &&&&&&  &   &#&       &&   &&    &
+ #    &&&#  &&  &# &#&  &&&&& &&&&  &&&&&  && &&&&
+&&           &   &&&
+                                                       &&
+                                                 &      &
+                &&&&&&&                          &&
+                &&                                #
+                &&                             &&&#&&
+                &&&&&&&                 &      && &&   &&   &#&&& &&&&&&
+                &&       && &&  &&&   &#&   && &# &    &#  &&& &# &&#  #
+                &&        #&#&  &&  &&&&&&& &&&&& &     &  &&&&&   &&  #
+                &&&&&&&   &  &    &          #                         &
+                                             #
+
+<hr></pre>
+<pre>
+Links:
+- <a href=ascii-art.htm>ascii-art</a>
+- <a href=journal.htm>journal</a>
+</pre>
+
+<pre>
+
+
+
+
+</pre>
+
+<!---------------->
+</body>
+</html>

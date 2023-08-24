@@ -1,0 +1,149 @@
+/* you know all too well who this is. */
+
+* {
+    outline: 0 !important;
+    box-shadow: none !important;
+    border-radius: none !important;
+}
+
+html,
+body{
+    width: calc(100% - 2ch);
+    height: calc(100% - 2ch);
+    margin: 0;
+    padding: 0;
+    padding: 0 1ch;
+    cursor: url("/img/cur/default.png") 1 1, default;
+}
+
+body,h1,h2,h3,h4,h5,h6,p,span,pre,div,button,input,textarea {
+    background: #000;
+    font-family: local-terminal;
+    font-size: 16px;
+    color: #0f0;
+    text-rendering: optimizeSpeed;
+}
+
+body {
+    width: 72ch;
+}
+
+body.cursor-busy,
+body.cursor-busy * {
+    cursor: url("/img/cur/wait.png") 7 12, wait;
+}
+
+h1,h2,h3,h4,h5,h6,p,span,pre,div {
+    cursor: url("/img/cur/text.png") 5 10, text;
+}
+
+button,input,textarea {
+    border: 1px solid #0f0;
+    resize: none;
+}
+
+button {
+    cursor: url("/img/cur/pointer.png") 5 1, pointer;
+}
+
+button:hover,
+input:hover,
+input:focus,
+textarea:focus {
+    background: #040;
+    color: #0f0;
+}
+
+button:active {
+    background: #0f0;
+    color: #000;
+}
+
+::selection {
+    background: #0f0;
+    color: #000;
+}
+
+::-webkit-scrollbar {
+    width: 16px;
+}
+
+::-webkit-scrollbar-track {
+    background: #000;
+    border: 1px solid #0f0;
+}
+
+::-webkit-scrollbar-thumb {
+    cursor: default;
+    background: #040;
+    border: 1px solid #0f0;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #0f0;
+}
+
+@font-face {
+    font-family: local-terminal;
+    src: url("/font/basis.ttf");
+}
+
+#journals,
+#journal_view,
+#ascii_art_view {
+    display: block;
+    width: 72ch;
+}
+
+#journal_view /* container */,
+#actions {
+    display: none;
+}
+
+#journals button[data-get],
+#ascii_art button[data-get] {
+    width: 100%;
+    text-align: left;
+    margin-bottom: .5ch;
+}
+
+#journals button * {
+    pointer-events: none;
+}
+
+#actions {
+    width: 100%;
+    float: left;
+    margin-bottom: 2ch;
+}
+
+#actions #view_journal {
+    float: left;
+}
+
+#actions #save_journal {
+    float: right;
+}
+
+hr {
+    border: none;
+    border-top: 1px solid #0f0;
+}
+
+#motd button {
+    float: right;
+}
+
+#journal_view hr {
+    margin: 0;
+    padding: 0;
+}
+
+a {
+    color: #0f0;
+    text-decoration: underline;
+}
+
+a:hover {
+    color: #080;
+}

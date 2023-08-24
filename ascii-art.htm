@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset=utf-8>
+    <meta name=viewport content="width=device-width,initial-scale=1">
+    <title>rnzxc - ascii-art</title>
+    <link rel=stylesheet type=text/css href=/css/cli.css>
+</head>
+<body class=cursor-busy>
+<!---------------->
+
+<pre id=motd>
+rnzxc - ascii-art<button onclick="hide_motd(this)"> hide </button>
+<hr></pre>
+<pre>Click <a href=/index.htm>here</a> to go home.</pre>
+
+<pre id=motd_extra>
+Here I post some ascii arts that you can browse and download for your
+own indulgement.
+
+All ASCII art is 72 characters wide.
+<hr></pre>
+
+<div id=ascii_art>Loading ASCII art ...</div>
+<div id=actions>
+<button id=view_journal onclick=view_ascii_art_fn()>go back</button>
+<button id=save_journal onclick=save_ascii_art_fn()>save</button>
+</div>
+<div id=ascii_art_view></div>
+<script type=text/javascript src=/js/ascii-art.js></script>
+
+<pre>
+
+
+
+
+</pre>
+
+<!---------------->
+</body>
+</html>
