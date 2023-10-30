@@ -123,5 +123,3 @@ if ($fp_status === false) {
 
 echo "OK\n";
 exit(0);
-
-?>
