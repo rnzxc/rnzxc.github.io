@@ -4,59 +4,45 @@
 <meta charset=utf-8>
 <meta name=viewport content="width=device-width,initial-scale=1">
 <meta name=x-ua-compatible content="IE=edge">
-<title>rnzxc - home</title>
+<title>rnzxc</title>
 <style>
-* {
-    outline: 0 !important;
-    border-radius: 0 !important;
-    text-shadow: none !important;
-    box-shadow: none !important;
-    filter: none !important;
-    box-sizing: border-box !important;
-    margin: 0 !important;
-    padding: 0 !important;
-    font-family: local-terminal !important;
-    font-weight: normal !important;
-    font-size: 16px !important
-}
-
 html,
 body {
     margin: 0 !important;
-    padding: 0 !important
+    padding: 0 !important;
 }
 
 body {
-    background: #222;
-    color: #eee
+    background: #000;
+    color: #FFF;
 }
 
-pre {
-    padding: 1ch !important
+#img1,
+#img2 {
+    position: fixed;
+    top: 0;
+    right: 0;
+    bototm: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-size: cover;
+    background-repeat: no-repeat;
+    image-rendering: pixelated;
+    background-position: center;
 }
 
-img {
-    image-rendering: pixelated
+#img1 {
+    background-image: url("./img/bg/sleep/bg.png");
 }
 
-@font-face {
-    font-family: local-terminal;
-    src: url("/font/basis.ttf");
+#img2 {
+    background-image: url("./img/bg/sleep/fg.png");
 }
 </style>
 </head>
 <body>
-<pre id=root>
-<img src=icon.png>
-rnzxc - home
-============
-
-Hi, this is a placeholder website.
-
-Content may or may not be added here.
-
-============================
-Updated: 2023-08-04 03:15 PM
-</pre>
+<div id=img1></div>
+<div id=img2></div>
 </body>
 </html>
