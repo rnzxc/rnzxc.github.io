@@ -1,6 +1,6 @@
 <?php
 
-/* 2023 (c) rnzxc */
+/* 2023-2024 (c) rnzxc */
 /* sync site data */
 
 $cd = __DIR__ . '/';
@@ -64,6 +64,11 @@ $buffer = "";
 
 function write_entry($file, $data) {
     $id = substr($file, 0, -4);
+
+    /* Skip template post in the journals dir */
+    if (strtolower($id) === "template")
+        continue;
+
     $head = explode("\n", $data, 2)[0];
     $head = str_between($head, "<h1>", "</h1>");
     $date = str_between($head, "<b>", "</b>");
