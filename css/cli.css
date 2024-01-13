@@ -18,7 +18,7 @@ body{
 
 body,h1,h2,h3,h4,h5,h6,p,span,pre,div,button,input,textarea {
     background: #000;
-    font-family: local-terminal;
+    font-family: local-terminal, monospace, monospace !important;
     font-size: 16px;
     color: #0f0;
     text-rendering: optimizeSpeed;
@@ -84,7 +84,7 @@ button:active {
 }
 
 @font-face {
-    font-family: local-terminal;
+    font-family: local-terminal, monospace, monospace !important;
     src: url("/font/basis.ttf");
 }
 
