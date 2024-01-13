@@ -64,11 +64,6 @@ $buffer = "";
 
 function write_entry($file, $data) {
     $id = substr($file, 0, -4);
-
-    /* Skip template post in the journals dir */
-    if (strtolower($id) === "template")
-        continue;
-
     $head = explode("\n", $data, 2)[0];
     $head = str_between($head, "<h1>", "</h1>");
     $date = str_between($head, "<b>", "</b>");
@@ -93,6 +88,10 @@ function str_between($s = '', $a = null, $b = null) {
 /* journals :)                                                    */
 foreach ($journals as $j) {
     if (strtolower(substr($j, -4, 4)) != ".htm")
+        continue;
+
+    /* Skip template post in the journals dir */
+    if (strtolower($j) === "template.htm")
         continue;
 
     $data = file_get_contents("$cd/data/journal/" . $j);
