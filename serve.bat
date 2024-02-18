@@ -1,4 +1,14 @@
 @echo off
-start http://127.0.0.1:5000/index.htm
-php -S 0.0.0.0:5000 -t "%cd%"
-exit /b 0
+
+rem Simple Local HTTP Bootstrap via PHP
+rem because, we can't deal with bullshit.
+
+set PROT=http
+set HOST=127.0.0.1
+set PORT=5000
+set PATH=/index.htm
+set LISTEN=0.0.0.0
+
+start %PROT%://%HOST%:%PORT%%PATH%
+php -S %LISTEN%:%PORT% -t "%CD%"
+exit /b %ERRORLEVEL%
