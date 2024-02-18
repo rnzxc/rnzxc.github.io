@@ -84,7 +84,7 @@ button:active {
 }
 
 @font-face {
-    font-family: local-terminal, monospace, monospace !important;
+    font-family: "local-terminal";
     src: url("/font/basis.ttf");
 }
 
