@@ -2,6 +2,8 @@
 
 setlocal
 
+set _OPT=%1
+
 rem Simple Local HTTP Bootstrap via PHP
 rem because, we can't deal with bullshit.
 
@@ -11,6 +13,11 @@ set _PORT=5000
 set _PATH=/index.htm
 set _LISTEN=0.0.0.0
 
-start %_PROT%://%_HOST%:%_PORT%%_PATH%
+rem Only invoke the default web browser
+rem if the 2nd parameter was not "--"
+if ["%_OPT%"] neq ["--"] (
+    start %_PROT%://%_HOST%:%_PORT%%_PATH%
+)
+
 php -S %_LISTEN%:%_PORT% -t "%CD%"
 exit /b %ERRORLEVEL%
