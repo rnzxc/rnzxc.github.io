@@ -1,4 +1,4 @@
-/* 2023 (c) rnzxc */
+/* 2023-2024 (c) rnzxc */
 /* list journals. */
 
 /* this function allows us to easily abstract the */
@@ -142,6 +142,22 @@ function save_journal() {
     anchor.remove();
 }
 
+function center_body_view() {
+    document.body.style.position = "relative";
+
+    var body_bounds = document.body.getBoundingClientRect();
+    var viewport_width = window.innerWidth;
+    
+    /* obliterate any floating point errors so the text  */
+    /* is crystal clear when we center the body. I care  */
+    /* about my readers, as opposed to some pajeets that */
+    /* have no clue about anything in life and shouldn't */
+    /* be so present in the tech industry after all the  */
+    /* shit they brought over from India.                */
+    var next_pos = (viewport_width / 2) - (body_bounds.width / 2) | 0;
+    document.body.style.left = next_pos + "px";
+} center_body_view();
+
 window.addEventListener("click", function(e) {
     var t = e.target;
     if (t.parentElement.getAttribute("id") != "journals")
@@ -155,3 +171,15 @@ function hide_motd(self) {
     self.innerText = ' ' + (motd_hidden ? "show" : "hide") + ' ';
     motd_extra.style.display = motd_hidden ? "none" : "block";
 }
+
+window.addEventListener("resize", function(e) {
+    center_body_view();
+});
+
+window.addEventListener("scroll", function(e) {
+    center_body_view();
+});
+
+window.onload = function() {
+    center_body_view();
+};
